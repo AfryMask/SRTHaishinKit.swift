@@ -66,7 +66,7 @@ final class ViewController: UIViewController {
         connection!.attachStream(srtStream)
             
             //update URL to your SRT Server
-         connection!.connect(URL(string: "srt://srt1.development.seasoncast.com:8080?streamid=uplive.sls.com/live/test"))
+         connection!.connect(URL(string: "srt://192.168.1.72:5000"))
             
         }else{
             srtStream.close()
