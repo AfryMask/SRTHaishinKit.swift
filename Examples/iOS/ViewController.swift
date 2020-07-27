@@ -44,9 +44,9 @@ final class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        srtStream.attachAudio(AVCaptureDevice.default(for: .audio)) { _ in
+//        srtStream.attachAudio(AVCaptureDevice.default(for: .audio)) { _ in
             // logger.warn(error.description)
-        }
+//        }
         srtStream.attachCamera(DeviceUtil.device(withPosition: currentPosition)) { _ in
             // logger.warn(error.description)
         }
@@ -66,7 +66,7 @@ final class ViewController: UIViewController {
         connection!.attachStream(srtStream)
             
             //update URL to your SRT Server
-         connection!.connect(URL(string: "srt://192.168.1.72:5000"))
+         connection!.connect(URL(string: "srt://192.168.1.104:5000"))
             
         }else{
             srtStream.close()
